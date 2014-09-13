@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiscreen App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/application.css" />
+    </head>
+    <body>
+        <div class="mobilePhone">
+            <img alt="Mobile Phone" src="img/mobile.png">
+            <div id="appWrapper">
+                <div id="page1" class="centerPage">
+                    <div class="appScreen">
+                        <div class="screenHeader">
+                            <div>Page #1</div>
+                        </div>
+                        <div class="screenBody">
+                            <ul class="buttonsList">
+                                <li id="showPage2Button">Show Page #2</li>
+                                <li id="showPage3Button">Show Page #3</li>
+                            </ul>
+                            <p class="page1Content">This is the Page #1 content<p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page2" class="rightPage">
+                    <div class="appScreen">
+                        <div class="screenHeader">
+                            <div id="backToPage1FromPage2" class="headerBackButtom headerOnTheLeft"></div>
+                            <div>Page #2</div>
+                        </div>
+                        <div class="screenBody">
+                            <p class="page2Content">This is the Page #2 content<p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page3" class="rightPage">
+                    <div class="appScreen">
+                        <div class="screenHeader">
+                            <div id="backToPage1FromPage3" class="headerBackButtom headerOnTheLeft"></div>
+                            <div>Page #3</div>
+                        </div>
+                        <div class="screenBody">
+                            <p class="page3Content">This is the Page #3 content<p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+                // Showing pages #2 and #3 from #1.
+                document.getElementById('showPage2Button').addEventListener('click', function() {
+                    document.getElementById('page1').className = document.getElementById('page1').className.replace('centerPage', 'leftPage');
+                    document.getElementById('page2').className = document.getElementById('page2').className.replace('rightPage', 'centerPage');
+                });
+                document.getElementById('showPage3Button').addEventListener('click', function() {
+                    document.getElementById('page1').className = document.getElementById('page1').className.replace('centerPage', 'leftPage');
+                    document.getElementById('page3').className = document.getElementById('page3').className.replace('rightPage', 'centerPage');
+                });
+                // Showing page #1 from #2.
+                document.getElementById('backToPage1FromPage2').addEventListener('click', function() {
+                    document.getElementById('page1').className = document.getElementById('page1').className.replace('leftPage', 'centerPage');
+                    document.getElementById('page2').className = document.getElementById('page2').className.replace('centerPage', 'rightPage');
+                });
+                // Showing page #1 from #3.
+                document.getElementById('backToPage1FromPage3').addEventListener('click', function() {
+                    document.getElementById('page1').className = document.getElementById('page1').className.replace('leftPage', 'centerPage');
+                    document.getElementById('page3').className = document.getElementById('page3').className.replace('centerPage', 'rightPage');
+                });
+            });
+        </script>
+    </body>
+</html>
