@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -o-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -moz-touch-callout: none;
+    -o-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;  
+    -o-user-select: none;
+}
+
+.mobilePhone {
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 175px);
+    width: 350px;
+    height: 150px;
+    text-align: center;
+}
+
+.mobilePhone img {
+    width: 100%;
+}
+
+/* >>>>>>>>>>>  APPLICATION GENERAL STYLE RULES  <<<<<<<<<<<< */
+
+#appWrapper {
+    position: absolute;
+    top: 123px;
+    left: 30px;
+    width: 294px;
+    height: 441px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+.appScreen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* GC, OP, SA and FF */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* IE */
+    overflow: hidden;
+}
+
+.leftPage,
+.centerPage,
+.rightPage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.leftPage {
+    left: -100%;
+}
+
+.centerPage {
+    left: 0;
+}
+
+.rightPage {
+    left: 100%;
+}
+
+/* >>>>>>>>>>>  HEADER STYLE RULES  <<<<<<<<<<<< */
+
+.screenHeader {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid #1284ff;
+}
+
+.headerBackButtom,
+.headerSaveButtom {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.headerBackButtom {
+    background-image: url('../img/back.png');
+}
+
+.headerSaveButtom {
+    background-image: url('../img/save.png');
+}
+
+.headerOnTheLeft { left: 0; }
+.headerOnTheRight { right: 0; }
+
+/* >>>>>>>>>>>  SCREEN BODY STYLE RULES  <<<<<<<<<<<< */
+
+.screenBody {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 40px);
+    text-align: center;
+    background-color: white;
+    overflow-x: no-display;
+    overflow-y: auto;
+}
+
+.screenBody p {
+    margin-top: 25px;
+    padding: 0 5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+.page1Content { color: red; }
+.page2Content { color: blue; }
+.page3Content { color: green; }
+
+.buttonsList {
+    margin: 0;
+    padding: 15px 5% 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+
+.buttonsList li {
+    line-height: 30px;
+    border: 1px solid #1284ff;
+    font-size: 1em;
+    list-style-type: none;
+}
+
+.buttonsList li:not(:first-child) {
+    margin-top: 15px;
+}
+
+.buttonsList li:active {
+    background-color: #1284ff;
+    color: white;
+}
