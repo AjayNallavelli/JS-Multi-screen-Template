@@ -58,3 +58,5 @@ style rule to move the screen on the left or on the right depending on what scre
 
 Then, we remove the class which keep hidden the screen which is gonna be shown and add to it the needed
 style rule to move this screen to the visible area on the mobile device.
+
+Finally, if you want to watch how it works, you can check the next link: [Showing Video](http://youtu.be/f0L7OZ_Vrmo).
